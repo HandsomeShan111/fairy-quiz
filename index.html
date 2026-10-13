@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ff8fd8" />
+    <title>Какая ты фея геймдева?</title>
+    <link rel="icon" href="data:," />
+    <!-- The board's bug report widget, on tailnet test sites only. -->
+    <script>if(location.hostname.endsWith(".ts.net"))document.head.append(Object.assign(document.createElement("script"),{src:"https://pane-server.tail9feca9.ts.net:8446/widget.js",defer:true}))</script>
+    <link rel="stylesheet" href="quiz.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <main>
+      <section id="title" class="screen">
+        <p class="sparkles" aria-hidden="true">✦ ✧ ★ ✧ ✦</p>
+        <h1 class="chrome">Какая ты фея геймдева?</h1>
+        <p class="subtitle">6 вопросов. Одна судьба</p>
+        <button id="start" class="btn">УЗНАТЬ СВОЮ СУДЬБУ</button>
+        <p class="sparkles" aria-hidden="true">♡ ✦ ♡</p>
+      </section>
+
+      <section id="question" class="screen" hidden>
+        <div class="progress">
+          <span id="count">1/6</span>
+          <div class="bar"><div id="fill"></div></div>
+        </div>
+        <h2 id="qtext"></h2>
+        <div id="answers" class="answers"></div>
+        <button id="confirm" class="btn" disabled>ПОДТВЕРДИТЬ</button>
+      </section>
+
+      <section id="result" class="screen" hidden>
+        <article class="card">
+          <div class="pic"><img id="rimg" width="864" height="1184" alt="" /></div>
+          <div class="head">
+            <h2 id="rname" class="chrome"></h2>
+            <p id="rrole" class="role"></p>
+            <p id="rquote" class="quote"></p>
+          </div>
+          <p id="rdesc" class="desc"></p>
+          <dl class="stats">
+            <div><dt>Суперсила:</dt> <dd id="rpower"></dd></div>
+            <div><dt>Проклятие:</dt> <dd id="rcurse"></dd></div>
+            <div><dt>Стабильность:</dt> <dd id="rstab"></dd></div>
+            <div><dt>Магия:</dt> <dd id="rmagic"></dd></div>
+          </dl>
+          <p class="cta">Хочешь научиться делать свои игры? Загляни в Школу Создателей Игр → <a href="https://t.me/PROTOschool" target="_blank" rel="noopener">t.me/PROTOschool</a></p>
+        </article>
+        <p class="share">Сделай скрин и кинь подругам</p>
+        <button id="again" class="btn">Пройти ещё раз</button>
+      </section>
+    </main>
+  </body>
+</html>
